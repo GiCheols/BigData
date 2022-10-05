@@ -1,0 +1,3 @@
+﻿  BFSnDFS.c
+C:\Users\ngc46\OneDrive\바탕 화면\gitHub\BigData\DFSnBFS2_2171278남기철\BFSnDFS.c(19,28): warning C4013: 'malloc'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+  DFSnBFS2_2171278남기철.vcxproj -> C:\Users\ngc46\OneDrive\바탕 화면\gitHub\BigData\DFSnBFS2_2171278남기철\Debug\DFSnBFS2_2171278남기철.exe
