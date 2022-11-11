@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS
+ï»¿#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -21,10 +21,10 @@ int main() {
 
 	fseek(fp, 0, SEEK_END);
 	total_block = ftell(fp) / sizeof(Person);
-	printf("ÀüÃ¼ blockÀÇ ¼ö == %d\n", total_block);
+	printf("ì „ì²´ blockì˜ ìˆ˜ == %d\n", total_block);
 
 	while (1) {
-		printf("¿øÇÏ´Â blockÀÇ ¼ıÀÚ (1~%d)¸¦ ÀÔ·ÂÇÏ°í Enter >> ", total_block);
+		printf("ì›í•˜ëŠ” blockì˜ ìˆ«ì (1~%d)ë¥¼ ì…ë ¥í•˜ê³  Enter >> ", total_block);
 		scanf("%ld", &block_number);
 		fflush(stdin);
 		if (block_number > total_block)
@@ -35,8 +35,8 @@ int main() {
 			exit(1);
 		}
 
-		printf("\n ÇöÀç blockÀÇ À§Ä¡ : %d\n", block_number);
-		printf(" ÀÌ¸§  \tÁÖ¼Ò\t   ³ªÀÌ\n");
+		printf("\n í˜„ì¬ blockì˜ ìœ„ì¹˜ : %d\n", block_number);
+		printf(" ì´ë¦„  \tì£¼ì†Œ\t   ë‚˜ì´\n");
 		printf("%-5s %-8s %2d\n", p.name, p.address, p.age);
 	}
 
