@@ -1,4 +1,4 @@
-//***************************************************************
+ï»¿//***************************************************************
 //                   HEADER FILE USED IN PROJECT
 //***************************************************************
 
@@ -29,22 +29,22 @@ FILE *fptr;
 //        function to write in file
 //****************************************************************
 
-void write_student()	//ÇÐ¹ø ÀÌ¸§ ÀÔ·Â ¹Þ±â
+void write_student()	//í•™ë²ˆ ì´ë¦„ ìž…ë ¥ ë°›ê¸°
 {
-	int studentNum, flag = 1;	// ÇÐ¹øÀÌ ÀÌ¹Ì ÀÖ´ÂÁö °Ë»çÇÏ±â À§ÇØ flag º¯¼ö Ãß°¡
-	// ÀÌ¹Ì ÇÐ¹øÀÌ Á¸ÀçÇÑ´Ù¸é flag = 0, ÇÐ¹øÀÌ »õ·Î ÀÔ·ÂÇÏ´Â °ªÀÌ¶ó¸é flag = 1;
+	int studentNum, flag = 1;	// í•™ë²ˆì´ ì´ë¯¸ ìžˆëŠ”ì§€ ê²€ì‚¬í•˜ê¸° ìœ„í•´ flag ë³€ìˆ˜ ì¶”ê°€
+	// ì´ë¯¸ í•™ë²ˆì´ ì¡´ìž¬í•œë‹¤ë©´ flag = 0, í•™ë²ˆì´ ìƒˆë¡œ ìž…ë ¥í•˜ëŠ” ê°’ì´ë¼ë©´ flag = 1;
 	int i;
 	errno_t err;
 	err = fopen_s(&fptr, "student.dat", "rb+");  
-	// rb+: ÀÌ¹Ì ÀÖ´Â ÇÐ¹øÀÎÁö °Ë»çÇÏ±â À§ÇØ ÀÐ±â + ¾²±â ¸ðµå·Î file open
+	// rb+: ì´ë¯¸ ìžˆëŠ” í•™ë²ˆì¸ì§€ ê²€ì‚¬í•˜ê¸° ìœ„í•´ ì½ê¸° + ì“°ê¸° ëª¨ë“œë¡œ file open
 
 	printf("\nPlease Enter The New Details of student \n");
 	printf("\nEnter The roll number of student ");
-	scanf_s("%d", &studentNum);	// ÇÐ¹ø ÀÔ·Â
+	scanf_s("%d", &studentNum);	// í•™ë²ˆ ìž…ë ¥
 	getchar(); // flushing buffer
 
-	while (fread(&st, sizeof(st), 1, fptr) > 0) {	// ±âÁ¸ ÇÐ¹øÀÌ ÀÖ´ÂÁö È®ÀÎÇÏ´Â loop
-		if (studentNum == st.rollno) {	// ±âÁ¸ ÇÐ¹øÀÌ Á¸ÀçÇÏ´Â °æ¿ì
+	while (fread(&st, sizeof(st), 1, fptr) > 0) {	// ê¸°ì¡´ í•™ë²ˆì´ ìžˆëŠ”ì§€ í™•ì¸í•˜ëŠ” ë°˜ë³µ ì‹¤í–‰
+		if (studentNum == st.rollno) {	// ê¸°ì¡´ í•™ë²ˆì´ ì¡´ìž¬í•˜ëŠ” ê²½ìš°
 			flag = 0;
 			break;
 		}
@@ -53,9 +53,9 @@ void write_student()	//ÇÐ¹ø ÀÌ¸§ ÀÔ·Â ¹Þ±â
 	}
 
 	if (flag) {
-		st.rollno = studentNum;	//½Å±Ô ÀÔ·ÂÇÏ´Â ÇÐ¹øÀÌ¶ó¸é ±¸Á¶Ã¼ÀÇ ÇÐ¹ø¿¡ ÇØ´çÇÏ´Â ·¹ÄÚµå¿¡ ÇÐ¹ø ÀúÀå
+		st.rollno = studentNum;	//ì‹ ê·œ ìž…ë ¥í•˜ëŠ” í•™ë²ˆì´ë¼ë©´ êµ¬ì¡°ì²´ì˜ í•™ë²ˆì— í•´ë‹¹í•˜ëŠ” ë ˆì½”ë“œì— í•™ë²ˆ ì €ìž¥
 		printf("\n\nEnter The Name of student ");
-		gets_s(st.name, sizeof(st.name));	// ÀÌ¸§ ÀÔ·Â: StringÅ¸ÀÔÀ¸·Î
+		gets_s(st.name, sizeof(st.name));	// ì´ë¦„ ìž…ë ¥: Stringíƒ€ìž…ìœ¼ë¡œ
 		printf("\nEnter The marks in physics out of 100 : ");
 		scanf_s("%d", &st.p_marks);
 		printf("\nEnter The marks in chemistry out of 100 : ");
@@ -71,10 +71,10 @@ void write_student()	//ÇÐ¹ø ÀÌ¸§ ÀÔ·Â ¹Þ±â
 		else
 			st.grade = 'F';
 		fwrite(&st, sizeof(st), 1, fptr);
-		// fptr ÆÄÀÏ¿¡ stÀÇ ³»¿ëÀ» ±¸Á¶Ã¼ÀÇ Å©±â¸¸Å­ ÀÔ·Â
+		// fptr íŒŒì¼ì— stì˜ ë‚´ìš©ì„ êµ¬ì¡°ì²´ì˜ í¬ê¸°ë§Œí¼ ìž…ë ¥
 		printf("\n\nStudent Record Has Been Created.  Press any key.... ");
 	}
-	else	// ÇÐ¹øÀÌ Á¸ÀçÇÏ´Â °æ¿ì ÀÖ´Ù´Â ¿À·ù¸Þ¼¼Áö¿Í ÇÔ²² ÇØ´ç ÇÔ¼ö Á¾·á
+	else	// í•™ë²ˆì´ ì¡´ìž¬í•˜ëŠ” ê²½ìš° ìžˆë‹¤ëŠ” ì˜¤ë¥˜ë©”ì„¸ì§€ì™€ í•¨ê»˜ í•´ë‹¹ í•¨ìˆ˜ ì¢…ë£Œ
 		printf("\n\nStudent Record already Exists.   Press any Key.... ");
 	fclose(fptr);
 	_getch();
@@ -101,8 +101,8 @@ void display_all()
 
 	while ( (i =  fread(&st, sizeof(st), 1, fptr)) > 0)
 	{
-		if (st.rollno == -1)	// ÇØ´ç ÇÐ¹øÀÌ »èÁ¦µÇ¾ú´Ù¸é
-			continue;	// Ãâ·ÂÇÏÁö ¾Ê°í °è¼Ó ÁøÇà
+		if (st.rollno == -1)	// í•´ë‹¹ í•™ë²ˆì´ ì‚­ì œë˜ì—ˆë‹¤ë©´
+			continue;	// ì¶œë ¥í•˜ì§€ ì•Šê³  ê³„ì† ì§„í–‰
 		else {
 			printf("%-6d %-10s %-3d %-3d %-3.2f  %-1c\n",
 				st.rollno, st.name, st.p_marks, st.c_marks, st.per, st.grade);
@@ -128,7 +128,7 @@ void display_sp(int n)
 	while ((fread(&st, sizeof(st), 1, fptr))>0)
 	{
 		if (st.rollno == -1)	
-			// ÇØ´ç ÇÐ¹øÀÌ »èÁ¦µÈ ·¹ÄÚµå¶ó¸é, flag¸¦ 0À¸·Î µÎ¾î Ã£´Â ÇÐ¹øÀÌ ¾øÀ½À» ¾Ë¸²
+			// í•´ë‹¹ í•™ë²ˆì´ ì‚­ì œëœ ë ˆì½”ë“œë¼ë©´, flagë¥¼ 0ìœ¼ë¡œ ë‘ì–´ ì°¾ëŠ” í•™ë²ˆì´ ì—†ìŒì„ ì•Œë¦¼
 			flag = 0;
 
 		else if (st.rollno == n)
@@ -179,7 +179,7 @@ void modify_student()
 			printf("\nPlease Enter The New Details of student \n");
 			printf("\nEnter The roll number of student ");
 			scanf_s("%d", &st.rollno);
-			getchar();  //flushing buffer (fflsh´Â ÀÛµ¿¾ÈÇÔ)
+			getchar();  //flushing buffer (fflshëŠ” ìž‘ë™ì•ˆí•¨)
 			printf("\n\nEnter The Name of student ");
 			gets_s(st.name, sizeof(st.name));
 			printf("\nEnter The marks in physics out of 100 : ");
@@ -221,7 +221,7 @@ void modify_student()
 //        function to delete record of file
 //****************************************************************
 
-void delete_student()	//»èÁ¦ÇÔ¼ö ¼öÁ¤ ¹öÀü
+void delete_student()	//ì‚­ì œí•¨ìˆ˜ ìˆ˜ì • ë²„ì „
 {
 	int no;
 	FILE *fptr2;
@@ -239,16 +239,16 @@ void delete_student()	//»èÁ¦ÇÔ¼ö ¼öÁ¤ ¹öÀü
 
 	while ((fread(&st, sizeof(st), 1, fptr))>0)
 	{
-		if (st.rollno == no)	// »èÁ¦ÇÏ·Á´Â ÇÐ¹øÀ» Ã£¾Ò´Ù¸é
+		if (st.rollno == no)	// ì‚­ì œí•˜ë ¤ëŠ” í•™ë²ˆì„ ì°¾ì•˜ë‹¤ë©´
 		{
-			st.rollno = -1;	// ±¸Á¶Ã¼ÀÇ ÇÐ¹ø°ªÀ» -1·Î ¹Ù²Ù°í
-			break;	// loop Å»Ãâ
+			st.rollno = -1;	// êµ¬ì¡°ì²´ì˜ í•™ë²ˆê°’ì„ -1ë¡œ ë°”ê¾¸ê³ 
+			break;	// loop íƒˆì¶œ
 		}
 	}
 
-	fseek(fptr, -(int)sizeof(st), 1);	// ÆÄÀÏ »èÁ¦ == ÇÐ¹ø ¹Ù²Ù±âÀÌ¹Ç·Î ¼öÁ¤ÇÔ¼öÀÇ ºÎºÐÀ» °¡Á®¿È
+	fseek(fptr, -(int)sizeof(st), 1);	// íŒŒì¼ ì‚­ì œ == í•™ë²ˆ ë°”ê¾¸ê¸°ì´ë¯€ë¡œ ìˆ˜ì •í•¨ìˆ˜ì˜ ë¶€ë¶„ì„ ê°€ì ¸ì˜´
 
-	fwrite(&st, sizeof(st), 1, fptr);	// ¿ø·¡ ÀÖ´ø À§Ä¡¿¡ µ¤¾î ¾¸
+	fwrite(&st, sizeof(st), 1, fptr);	// ì›ëž˜ ìžˆë˜ ìœ„ì¹˜ì— ë®ì–´ ì”€
 
 	fclose(fptr);
 
