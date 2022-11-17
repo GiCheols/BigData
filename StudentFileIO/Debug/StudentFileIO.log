@@ -1,3 +1,4 @@
 ﻿  student.c
-C:\Users\ngc46\OneDrive\바탕 화면\2022-2\빅기초\student.c(35,6): warning C4101: 'i' :참조되지 않은 지역 변수입니다.
+C:\Users\ngc46\OneDrive\바탕 화면\2022-2\빅기초\student.c(37,6): warning C4101: 'i' :참조되지 않은 지역 변수입니다.
+C:\Users\ngc46\OneDrive\바탕 화면\2022-2\빅기초\student.c(235,8): warning C4101: 'fptr2' :참조되지 않은 지역 변수입니다.
   StudentFileIO.vcxproj -> C:\Users\ngc46\OneDrive\바탕 화면\gitHub\BigData\StudentFileIO\Debug\StudentFileIO.exe
