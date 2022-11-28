@@ -65,9 +65,7 @@ void writeStudent() {
 	else
 		grade = 'F';
 
-	printf("%d, %s, %d, %d, %2f, %c", rollno, name, p_marks, c_marks, per, grade);
 	sprintf(query, "insert into student values(%d, \"%s\", %d, %d, %2f, \"%c\")", rollno, name, p_marks, c_marks, per, grade);
-	mysql_query(mysql, query);
 
 	if (mysql_query(mysql, query)) {
 		finishWithError(mysql);
@@ -76,8 +74,6 @@ void writeStudent() {
 	printf("\n\nStudent Record Has Been Created.  Press any key.... ");
 	_getch();
 }
-
-
 
 void write_student()
 {
@@ -108,7 +104,6 @@ void write_student()
 	printf("\n\nStudent Record Has Been Created.  Press any key.... ");
 	_getch();
 }
-
 
 //***************************************************************
 //        function to read all records from file
@@ -143,7 +138,6 @@ void displayAll()
 	getchar();
 }
 
-
 void display_all()
 {
 	errno_t err; int i;
@@ -165,7 +159,6 @@ void display_all()
 	fclose(fptr);
 	_getch();
 }
-
 
 //***************************************************************
 //        function to read specific record from file
@@ -234,7 +227,6 @@ void display_sp(int n)
 		printf("\n\nrecord not exist");
 	_getch();
 }
-
 
 //***************************************************************
 //        function to modify record of file
@@ -372,7 +364,6 @@ void modify_student()
 	_getch();
 }
 
-
 //***************************************************************
 //        function to delete record of file
 //****************************************************************
@@ -425,11 +416,10 @@ void delete_student()
 	_getch();
 }
 
-
-
 //***************************************************************
 //        THE MAIN FUNCTION OF PROGRAM
 //****************************************************************
+
 void main()
 {
 	mysql = mysql_init(NULL);
