@@ -1,0 +1,4 @@
+﻿  studentSql.c
+C:\Users\ngc46\Desktop\gitHub\BigData\SQLTask2\studentSql.c(160,45): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\ngc46\Desktop\gitHub\BigData\SQLTask2\studentSql.c(325,45): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  SQLTask2.vcxproj -> C:\Users\ngc46\Desktop\gitHub\BigData\SQLTask2\x64\Debug\SQLTask2.exe
