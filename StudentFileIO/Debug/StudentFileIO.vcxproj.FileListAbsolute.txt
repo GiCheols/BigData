@@ -1,1 +1,2 @@
 C:\Users\ngc46\OneDrive\바탕 화면\gitHub\BigData\StudentFileIO\Debug\StudentFileIO.exe
+C:\Users\ngc46\Desktop\gitHub\BigData\StudentFileIO\Debug\StudentFileIO.exe
