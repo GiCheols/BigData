@@ -1,9 +1,9 @@
-﻿#include <stdio.h>
-#include <mysql.h>
-
-void main() {
-	printf("%s\n\n", mysql_get_client_info());
-}
+﻿//#include <stdio.h>
+//#include <mysql.h>
+//
+//void main() {
+//	printf("%s\n\n", mysql_get_client_info());
+//}
 
 /*
 프로젝트 속성 - VC++ 디렉터리 - 포함 디렉터리에 다음을 추가:
